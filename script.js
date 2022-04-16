@@ -11,16 +11,21 @@ function addBoxes (x) {
     //second one inside creates each line in the row
     for (let i = 0; i < x; i++){
       let row = document.createElement("div");
-      row.classList.add('row');
+      row.classList.add('row');  
       /*
-      row.setAttribute(
+      document.querySelector('row').setAttribute(
           'style',
-          'height: 20px; width: 900px, float: left',
+          'height: 20px; width: 2000px, float: left',
       )
       */
       for (let b = 0; b < x; b++){
           let block = document.createElement("div");
             block.classList.add('block');
+            function flipper (x){   
+                x.classList.add('flipped');
+                 x.classList.remove('block');
+             }
+            block.onmouseover = function(){flipper(block);};
           /*
           rowData.setAttribute(
               'style',

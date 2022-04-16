@@ -2,21 +2,24 @@ h1 {
     color: blue;
 }
 #container {
-    height: 900px;
-    width: 2000px;
+    display: flex;
 }
 .row {
-    border: black 2px solid;
+    border: rgb(177, 174, 174) 1px solid;
     float: left;
-    height: 20px;
-    width: 900px;
+
 }
 .block {
-    border: black 2px solid;
-    float: left;
-    height: 20px;
-    width: 20px;
+    border: rgb(177, 174, 174) 1px solid;
+    height: 5px;
+    width: 5px;
 }
 .block:hover {
+    background-color: black;
+}
+.flipped {
+    border: rgb(177, 174, 174) 1px solid;
+    height: 5px;
+    width: 5px;
     background-color: black;
 }
