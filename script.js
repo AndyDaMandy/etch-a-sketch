@@ -11,10 +11,23 @@ function addBoxes (x) {
     //second one inside creates each line in the row
     for (let i = 0; i < x; i++){
       let row = document.createElement("div");
-      row.className = 'row';
+      row.classList.add('row');
+      /*
+      row.setAttribute(
+          'style',
+          'height: 20px; width: 900px, float: left',
+      )
+      */
       for (let b = 0; b < x; b++){
-          let rowData = document.createElement("div");
-          row.appendChild(rowData);
+          let block = document.createElement("div");
+            block.classList.add('block');
+          /*
+          rowData.setAttribute(
+              'style',
+              'background-color: black; height: 20px; width: 20px; float: left',
+          )
+          */
+          row.appendChild(block);
       }
       container.appendChild(row);
     }
