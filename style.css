@@ -1,6 +1,4 @@
-h1 {
-    color: blue;
-}
+
 #container {
     display: flex;
 }
@@ -11,15 +9,17 @@ h1 {
 }
 .block {
     border: rgb(177, 174, 174) 1px solid;
-    height: 5px;
-    width: 5px;
+    height: 7px;
+    width: 7px;
 }
+/*
 .block:hover {
     background-color: black;
 }
+*/
 .flipped {
     border: rgb(177, 174, 174) 1px solid;
-    height: 5px;
-    width: 5px;
-    background-color: black;
+    height: 7px;
+    width: 7px;
+    
 }

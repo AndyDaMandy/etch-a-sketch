@@ -1,11 +1,7 @@
 const container = document.querySelector('#container');
 
 function addBoxes (x) {
-    if (x > 100){
-        alert("Going above 100 is bad, sorry!");
-    } else if (x < 12){
-        alert("Going below 12 is too low");
-    }
+    container.innerHTML = '';
     //two for loops
     //first one creates a row container
     //second one inside creates each line in the row
@@ -25,7 +21,7 @@ function addBoxes (x) {
                 x.classList.add('flipped');
                  x.classList.remove('block');
              }
-            block.onmouseover = function(){flipper(block);};
+            block.onmouseover = function(){flipper(block); let randomColor = Math.floor(Math.random()*16777215).toString(16); block.style.backgroundColor = '#' + randomColor};
           /*
           rowData.setAttribute(
               'style',
@@ -35,5 +31,16 @@ function addBoxes (x) {
           row.appendChild(block);
       }
       container.appendChild(row);
+    }
+}
+
+function prompter(){
+  let number =  prompt('What size grid would you like? Please select a number between 12 and 100')
+    if (number > 100){
+        alert("Going above 100 is bad, sorry!");
+    } else if (number < 12){
+        alert("Going below 12 is too low");
+    } else {
+        addBoxes(number)
     }
 }
